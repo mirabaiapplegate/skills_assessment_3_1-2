@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+    <head>
+      <meta charset="UTF-8">
+      <title>{% block title %} Skills-Web {% endblock %}</title>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+      <link rel="stylesheet" href="/static/styles.css">
+    </head>
+    <body>
+        <div class="navbar navbar-inverse navbar-static-top navbar-responsive">
+            <div class="container">
+
+                <div class="navbar-header">
+                    <img src="/static/flower.jpeg">
+                    <a class="navbar-brand" href="/">Uberflower</a>
+                </div>
+
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="/cart">
+                                My Cart
+                            </a>
+                        </li>
+                        <li><a href="">Log In</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+        {% block content %} Body contet goes here. {% endblock %}
+    </body>
+</html>

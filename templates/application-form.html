@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block title %} Application Form {% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
+            <form action='/application' method=“GET”>
+              <div class="form-group">
+                <label for="first-name">First Name: </label>
+                <input type="first-name" class="form-control" id="first-name" name="first-name" placeholder="First Name">
+              </div>
+              <div class="form-group">
+                <label for="last-name">Last Name: </label>
+                <input type="last-name" class="form-control" id="last-name" name="last-name" placeholder="Last Name">
+              </div>
+              <div class="form-group">
+                <label for="salary-requirement">Salary Requirement: </label>
+                <div class="form-group">
+                  <label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
+                  <div class="input-group">
+                    <div class="input-group-addon">$</div>
+                    <input type="text" name="salary-requirement" class="form-control" id="exampleInputAmount" placeholder="Amount">
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                 <label for="position">Position: </label>
+                  <select class="form-control" name="position">
+                    <option>Software Engineer</option>
+                    <option>QA Engineer</option>
+                    <option>Product Manager</option>
+                  </select>
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+              </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
